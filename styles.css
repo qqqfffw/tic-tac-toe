@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.player-info {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.player-info div {
+  text-align: center;
+}
+
+.gameboard-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3x3 grid layout */
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  border: 2px solid #000; /* Optional: Add a border around the gameboard */
+}
+
+.cell {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border: 1px solid #ccc; /* Add cell borders */
+}
+
+.cell.taken {
+  cursor: not-allowed;
+  background-color: #e0e0e0; /* Visual feedback for taken cells */
+}
+
+.winning-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
